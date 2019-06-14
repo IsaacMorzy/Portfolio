@@ -6,9 +6,16 @@ from django.views.generic import TemplateView
 from django.views import defaults as default_views
 
 from rest_framework.routers import DefaultRouter
+from markdownx import urls as markdownx
+
+from projects import views as pv
+from rest_framework.routers import SimpleRouter
 
 
-router = DefaultRouter(trailing_slash=False)
+
+
+router = DefaultRouter()
+router.register(r'projects', pv.ProjectViewSet)
 
 
 urlpatterns = [
@@ -23,6 +30,8 @@ urlpatterns = [
     # User management
     path("users/", include("portfol.users.urls", namespace="users")),
     path("accounts/", include("allauth.urls")),
+    path ("markdownx/", include("markdownx.urls")),
+
     # Your stuff: custom urls includes go here
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
