@@ -85,7 +85,7 @@ LOCAL_APPS = [
     # Your stuff: custom apps go here
     "projects",
     "contents",
-    "blog"
+    "blog",
 
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
