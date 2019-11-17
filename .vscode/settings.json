@@ -1,3 +1,7 @@
 {
-    "python.pythonPath": "port/bin/python3"
+    "python.pythonPath": "port/bin/python3",
+    "black.debug": true,
+    "search.showLineNumbers": true,
+    "search.smartCase": true,
+    "search.useGlobalIgnoreFiles": true
 }

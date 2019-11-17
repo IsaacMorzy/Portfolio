@@ -13,7 +13,7 @@ REACT_APP_DIR = ROOT_DIR.path("frontend")
 
 env = environ.Env()
 
-READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=False)
+READ_DOT_ENV_FILE = env.bool("DJANGO_READ_DOT_ENV_FILE", default=True)
 if READ_DOT_ENV_FILE:
     # OS environment variables take precedence over variables from .env
     env.read_env(str(ROOT_DIR.path(".env")))
@@ -77,11 +77,15 @@ THIRD_PARTY_APPS = [
     "corsheaders",
     "markdownx",
     "markdown",
+    "taggit",
+    "pygments"
 ]
 LOCAL_APPS = [
     "portfol.users.apps.UsersConfig",
     # Your stuff: custom apps go here
     "projects",
+    "contents",
+    "blog"
 
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
@@ -150,7 +154,7 @@ STATIC_URL = "/static/"
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#std:setting-STATICFILES_DIRS
 STATICFILES_DIRS = [
     str(APPS_DIR.path("static")),
-    os.path.join(str(REACT_APP_DIR.path("build")), 'static'),
+    os.path.join(str(REACT_APP_DIR.path(".next")), 'static'),
 ]
 # https://docs.djangoproject.com/en/dev/ref/contrib/staticfiles/#staticfiles-finders
 STATICFILES_FINDERS = [
@@ -175,7 +179,7 @@ TEMPLATES = [
         # https://docs.djangoproject.com/en/dev/ref/settings/#template-dirs
         "DIRS": [
             str(APPS_DIR.path("templates")),
-            str(REACT_APP_DIR.path("build")),
+            str(REACT_APP_DIR.path(".next")),
         ],
         "OPTIONS": {
             # https://docs.djangoproject.com/en/dev/ref/settings/#template-debug

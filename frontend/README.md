@@ -1,44 +1,55 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# omaralbeik.com
 
-## Available Scripts
+> Source code for [my website](https://omaralbeik.com) client.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- Built using NextJS.
+- Server side rendering and SEO friendly
+- Progressive web app (PWA).
+- Fully Written in ES6.
+- State management and local caching using Redux and Local Storage.
+- Google Analytics support.
+- Light/Dark themes and CSS in JS using [styled-componenets](https://www.styled-components.com/)
+- Fully responsive design with the help of Bootstrap.
+- Support for .env files.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Dependencies
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+This project is built using NextJS, Redux and other dependencies. Complete list of 3rd party dependencies can be found in [**package.json**](package.json)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### React Setup
 
-### `npm run build`
+1. This app requires **npm** to build, if **Node** and **npm** are not installed on your device, you should install them first [more info here](https://docs.npmjs.com/getting-started/installing-node)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+2. Move to project directory and install required npm packages
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+``` sh
+npm i
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Start NextJS development server
 
-### `npm run eject`
+Run development server
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```sh
+npm run dev
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Create a production build
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+To create a production build, use:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```sh
+npm run build
+```
 
-## Learn More
+## Contributing
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Your feedback is always appreciated and welcomed. If you find a bug in the source code or a mistake in the documentation, you can help me by submitting an issue [**here**](https://github.com/omaralbeik/omaralbeik.com-client/issues). Even better you can submit a Pull Request with a fix :)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## License
+
+This repo is released under the [MIT License](LICENSE).

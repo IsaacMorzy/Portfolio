@@ -9,13 +9,18 @@ from rest_framework.routers import DefaultRouter
 from markdownx import urls as markdownx
 
 from projects import views as pv
-from rest_framework.routers import SimpleRouter
+from contents import views as cv
+from blog import views as bv
+
 
 
 
 
 router = DefaultRouter()
 router.register(r'projects', pv.ProjectViewSet)
+router.register(r'contents',cv.ContentViewSet)
+router.register(r'blog', bv.PostViewSet)
+
 
 
 urlpatterns = [
