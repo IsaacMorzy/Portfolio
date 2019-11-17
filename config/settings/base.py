@@ -83,10 +83,10 @@ THIRD_PARTY_APPS = [
 LOCAL_APPS = [
     "portfol.users.apps.UsersConfig",
     # Your stuff: custom apps go here
-    "portfol.projects.apps.ProjectsConfig",
-    "portfol.contents.apps.ContentsConfig",
-    "portfol.blog.apps.BlogConfig"
 
+    "portfol.contents.apps.ContentsConfig",
+    "portfol.blog.apps.BlogConfig",
+    "portfol.projects.apps.ProjectsConfig"
 ]
 # https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
