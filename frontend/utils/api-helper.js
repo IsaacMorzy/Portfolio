@@ -3,7 +3,7 @@ import fetch from 'isomorphic-unfetch';
 class APIHelper {
 
   static get API_URL() {
-    return 'http://127.0.0.1:8000/api';
+    return 'http://localhost:8000/api';
   }
 
   static get BLOG_URL() {
